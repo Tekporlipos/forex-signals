@@ -1,6 +1,10 @@
-PS C:\Users\dzikohn\node-test> npm create vite@latest m-react-app
-npm error code UNABLE_TO_VERIFY_LEAF_SIGNATURE
-npm error errno UNABLE_TO_VERIFY_LEAF_SIGNATURE
-npm error request to https://registry.npmjs.org/create-vite failed, reason: unable to verify the first certificate
-npm error A complete log of this run can be found in: C:\Users\dzikohn\AppData\Local\npm-cache\_logs\2025-10-10T16_39_19_326Z-debug-0.log
-PS C:\Users\dzikohn\node-test>
+agbomer@GBMACVCSW9130:~/coding/mortgage-profitability-backend$ pip install -r requirements.txt
+Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (from -r requirements.txt (line 1)) (45.2.0)
+Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from -r requirements.txt (line 2)) (2.22.0)
+WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fb82e8c3850>: Failed to establish a new connection: [Errno -2] Name or service not known')': /simple/uvicorn/
+WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fb82e8c38e0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /simple/uvicorn/
+WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fb82e8d2bb0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /simple/uvicorn/
+WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fb82e8d2940>: Failed to establish a new connection: [Errno -2] Name or service not known')': /simple/uvicorn/
+WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fb82e8d2700>: Failed to establish a new connection: [Errno -2] Name or service not known')': /simple/uvicorn/
+ERROR: Could not find a version that satisfies the requirement uvicorn (from -r requirements.txt (line 3)) (from versions: none)
+ERROR: No matching distribution found for uvicorn (from -r requirements.txt (line 3))
