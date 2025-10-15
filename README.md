@@ -1,10 +1,45 @@
-agbomer@GBMACVCSW9130:~/coding/mortgage-profitability-backend$ pip install -r requirements.txt
-Requirement already satisfied: setuptools in /usr/lib/python3/dist-packages (from -r requirements.txt (line 1)) (45.2.0)
-Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from -r requirements.txt (line 2)) (2.22.0)
-WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fb82e8c3850>: Failed to establish a new connection: [Errno -2] Name or service not known')': /simple/uvicorn/
-WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fb82e8c38e0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /simple/uvicorn/
-WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fb82e8d2bb0>: Failed to establish a new connection: [Errno -2] Name or service not known')': /simple/uvicorn/
-WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fb82e8d2940>: Failed to establish a new connection: [Errno -2] Name or service not known')': /simple/uvicorn/
-WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x7fb82e8d2700>: Failed to establish a new connection: [Errno -2] Name or service not known')': /simple/uvicorn/
-ERROR: Could not find a version that satisfies the requirement uvicorn (from -r requirements.txt (line 3)) (from versions: none)
-ERROR: No matching distribution found for uvicorn (from -r requirements.txt (line 3))
+Hi John, I chatted with Simeon, he did mentioned Romain need to set this up. Can you drop an email to Romain, Simeon and copying me with the ask please.
+ 
+Dzikunu, John (Data & Analytics, Digital X)
+but i hope i can just proceed with the code set up on my local while i wait for him to set things up
+Yeah sounds good, let go with local
+
+
+ Hello,
+ 
+Prasad asked me to reach out if you can provision a GitLab repository for the new wealth frontend forecaster and optimiser for me?
+ 
+I reached out to Romain but seems he is busy
+ 
+Do you have the link to the repo?
+ 
+Hello btw
+ 
+No, I learnt is a new profit 
+ 
+project*
+ 
+the is SK-frontend but i am told we will be building new one
+ 
+Hmmm not sure then. I'll take a look but I think you will have to go through Romain, I don't have authority to authorise anyone.
+ 
+okay will inform Prasad then
+ 
+Not sure it has been created yet?
+ 
+Is not created, there is existing project called SK-front but Prasad told me we will be building a new one from it
+ 
+Yeah, sorry don't know anything about it.  I would guess we would be starting from scratch and using the existing one as a reference.  
+ 
+yes 
+ 
+but the repository is not created yet
+ 
+Coles, Simeon (Digital Finance, Group Finance)
+Yeah, sorry don't know anything about it.  I would guess we would be starting from scratch and using the existing one as a reference.
+we using the SK-front as reference and new data source too
+ 
+You will need to speak with Romain unfortunately
+ 
+Okay thank you, Have already reached out but not responding 
+ 
