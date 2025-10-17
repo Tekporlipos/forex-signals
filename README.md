@@ -1,17 +1,19 @@
-PS C:\dev\Developer\sk-sandbox-backend> pip list
-Package    Version
----------- -------
-pip        19.2.3
-setuptools 41.2.0
-Could not fetch URL https://pypi.org/simple/pip/: There was a problem confirming the ssl certificate: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /simple/pip/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1108)'))) - skipping
-PS C:\dev\Developer\sk-sandbox-backend> pip config list
-global.cert='C:\\dev\\certs\\ca-certificates.crt'
-PS C:\dev\Developer\sk-sandbox-backend> pip config set global.trusted-host tools.rbspeople.com
-Writing to C:\Users\dzikohn\AppData\Roaming\pip\pip.ini
-PS C:\dev\Developer\sk-sandbox-backend> pip list
-Package    Version
----------- -------
-pip        19.2.3
-setuptools 41.2.0
-Could not fetch URL https://pypi.org/simple/pip/: There was a problem confirming the ssl certificate: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /simple/pip/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1108)'))) - skipping
-PS C:\dev\Developer\sk-sandbox-backend>
+
+PS C:\dev\Developer\sk-sandbox-backend> py pip - V
+C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\python.exe: can't open file 'C:\\dev\\Developer\\sk-sandbox-backend\\pip': [Errno 2] No such file or directory
+PS C:\dev\Developer\sk-sandbox-backend> py
+Python 3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+KeyboardInterrupt
+>>> ^Z
+PS C:\dev\Developer\sk-sandbox-backend> python -V
+Python 3.14.0
+PS C:\dev\Developer\sk-sandbox-backend> pip -V
+pip : The term 'pip' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ pip -V
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (pip:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
