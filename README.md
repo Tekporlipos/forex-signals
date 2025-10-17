@@ -1,117 +1,96 @@
-PS C:\dev\Developer\sk-sandbox-backend> py -m pip install -r .\requirements.txt
-Looking in indexes: https://tools.rbspeople.com/nexus/repository/daeng-pypi-all-repos/simple
-User for tools.rbspeople.com: mhL48uC-
-Password:
-Collecting annotated-types==0.6.0 (from -r .\requirements.txt (line 1))
-  Downloading https://tools.rbspeople.com/nexus/repository/daeng-pypi-all-repos/packages/annotated-types/0.6.0/annotated_types-0.6.0-py3-none-any.whl (12 kB)
-Collecting anyio==4.3.0 (from -r .\requirements.txt (line 2))
-  Downloading https://tools.rbspeople.com/nexus/repository/daeng-pypi-all-repos/packages/anyio/4.3.0/anyio-4.3.0-py3-none-any.whl (85 kB)
-Collecting asn1crypto==1.5.1 (from -r .\requirements.txt (line 3))
-  Downloading https://tools.rbspeople.com/nexus/repository/daeng-pypi-all-repos/packages/asn1crypto/1.5.1/asn1crypto-1.5.1-py2.py3-none-any.whl (105 kB)
-Collecting certifi==2024.2.2 (from -r .\requirements.txt (line 4))
-  Downloading https://tools.rbspeople.com/nexus/repository/daeng-pypi-all-repos/packages/certifi/2024.2.2/certifi-2024.2.2-py3-none-any.whl (163 kB)
-Collecting cffi==1.16.0 (from -r .\requirements.txt (line 5))
-  Downloading https://tools.rbspeople.com/nexus/repository/daeng-pypi-all-repos/packages/cffi/1.16.0/cffi-1.16.0.tar.gz (512 kB)
-  Installing build dependencies ... error
-  error: subprocess-exited-with-error
+Perfect — this is a classic corporate Nexus/PyPI proxy issue, and your output tells us exactly what’s happening.
 
-  × pip subprocess to install build dependencies did not run successfully.
-  │ exit code: 2
-  ╰─> [86 lines of output]
-      Looking in indexes: https://tools.rbspeople.com/nexus/repository/daeng-pypi-all-repos/simple
-      User for tools.rbspeople.com: ERROR: Exception:
-      Traceback (most recent call last):
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\cli\base_command.py", line 107, in _run_wrapper
-          status = _inner_run()
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\cli\base_command.py", line 98, in _inner_run
-          return self.run(options, args)
-                 ~~~~~~~~^^^^^^^^^^^^^^^
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\cli\req_command.py", line 71, in wrapper
-          return func(self, options, args)
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\commands\install.py", line 393, in run
-          requirement_set = resolver.resolve(
-              reqs, check_supported_wheels=not options.target_dir
-          )
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\resolution\resolvelib\resolver.py", line 98, in resolve
-          result = self._result = resolver.resolve(
-                                  ~~~~~~~~~~~~~~~~^
-              collected.requirements, max_rounds=limit_how_complex_resolution_can_be
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-          )
-          ^
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_vendor\resolvelib\resolvers\resolution.py", line 596, in resolve
-          state = resolution.resolve(requirements, max_rounds=max_rounds)
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_vendor\resolvelib\resolvers\resolution.py", line 429, in resolve
-          self._add_to_criteria(self.state.criteria, r, parent=None)
-          ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_vendor\resolvelib\resolvers\resolution.py", line 150, in _add_to_criteria
-          if not criterion.candidates:
-                 ^^^^^^^^^^^^^^^^^^^^
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_vendor\resolvelib\structs.py", line 194, in __bool__
-          return bool(self._sequence)
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\resolution\resolvelib\found_candidates.py", line 165, in __bool__
-          self._bool = any(self)
-                       ~~~^^^^^^
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\resolution\resolvelib\found_candidates.py", line 149, in <genexpr>
-          return (c for c in iterator if id(c) not in self._incompatible_ids)
-                             ^^^^^^^^
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\resolution\resolvelib\found_candidates.py", line 35, in _iter_built
-          for version, func in infos:
-                               ^^^^^
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\resolution\resolvelib\factory.py", line 300, in iter_index_candidate_infos
-          result = self._finder.find_best_candidate(
-              project_name=name,
-              specifier=specifier,
-              hashes=hashes,
-          )
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\index\package_finder.py", line 915, in find_best_candidate
-          candidates = self.find_all_candidates(project_name)
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\index\package_finder.py", line 852, in find_all_candidates
-          page_candidates = list(page_candidates_it)
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\index\sources.py", line 196, in page_candidates
-          yield from self._candidates_from_page(self._link)
-                     ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\index\package_finder.py", line 810, in process_project_url
-          index_response = self._link_collector.fetch_response(project_url)
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\index\collector.py", line 443, in fetch_response
-          return _get_index_content(location, session=self.session)
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\index\collector.py", line 347, in _get_index_content
-          resp = _get_simple_response(url, session=session)
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\index\collector.py", line 126, in _get_simple_response
-          resp = session.get(
-              url,
-          ...<22 lines>...
-              },
-          )
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_vendor\requests\sessions.py", line 602, in get
-          return self.request("GET", url, **kwargs)
-                 ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\network\session.py", line 528, in request
-          return super().request(method, url, *args, **kwargs)
-                 ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_vendor\requests\sessions.py", line 589, in request
-          resp = self.send(prep, **send_kwargs)
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_vendor\requests\sessions.py", line 710, in send
-          r = dispatch_hook("response", hooks, r, **kwargs)
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_vendor\requests\hooks.py", line 30, in dispatch_hook
-          _hook_data = hook(hook_data, **kwargs)
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\network\auth.py", line 503, in handle_401
-          username, password, save = self._prompt_for_password(parsed.netloc)
-                                     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\network\auth.py", line 458, in _prompt_for_password
-          username = ask_input(f"User for {netloc}: ") if self.prompting else None
-                     ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
-        File "C:\Users\dzikohn\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\pip\_internal\utils\misc.py", line 235, in ask_input
-          return input(message)
-      EOFError: EOF when reading a line
-      [end of output]
+Let’s break it down clearly 👇
 
-  note: This error originates from a subprocess, and is likely not a problem with pip.
-error: subprocess-exited-with-error
+⸻
 
-× pip subprocess to install build dependencies did not run successfully.
-│ exit code: 2
-╰─> See above for output.
+💡 What’s happening
 
-note: This error originates from a subprocess, and is likely not a problem with pip.
-PS C:\dev\Developer\sk-sandbox-backend>
+You’re installing from:
+
+https://tools.rbspeople.com/nexus/repository/daeng-pypi-all-repos/simple
+
+That’s an internal Nexus (private PyPI proxy).
+
+When pip tries to build or install certain packages (like cffi), it spawns a subprocess that also tries to download dependencies — and that subprocess doesn’t inherit your authentication credentials.
+
+So pip asks again:
+
+User for tools.rbspeople.com:
+
+But inside that subprocess, there’s no terminal input available, so input() raises:
+
+EOFError: EOF when reading a line
+
+That’s why it fails.
+
+⸻
+
+✅ How to fix it
+
+Option 1: Use a pip config file with credentials
+
+Create or edit this file:
+
+Windows:
+
+%APPDATA%\pip\pip.ini
+
+Linux/macOS:
+
+~/.config/pip/pip.conf
+
+Add your internal repo and credentials (replace with your real username/password):
+
+[global]
+index-url = https://mhL48uC-:YOUR_PASSWORD@tools.rbspeople.com/nexus/repository/daeng-pypi-all-repos/simple
+trusted-host = tools.rbspeople.com
+
+🧠 Tip: if your password contains special characters (@, #, !, :), URL-encode them
+e.g., p@ss!word → p%40ss%21word
+
+Then rerun:
+
+py -m pip install -r requirements.txt
+
+Now pip (and its subprocesses) will authenticate automatically.
+
+⸻
+
+Option 2: Use an environment variable instead
+
+If you don’t want to store credentials in plaintext:
+
+$env:PIP_INDEX_URL = "https://mhL48uC-:YOUR_PASSWORD@tools.rbspeople.com/nexus/repository/daeng-pypi-all-repos/simple"
+$env:PIP_TRUSTED_HOST = "tools.rbspeople.com"
+py -m pip install -r requirements.txt
+
+
+⸻
+
+Option 3: (If allowed) temporarily use public PyPI for missing packages
+
+If your Nexus repo doesn’t proxy all packages, you can fall back to public PyPI:
+
+py -m pip install -r requirements.txt --extra-index-url https://pypi.org/simple
+
+
+⸻
+
+🧩 Bonus Tip: cffi build dependencies
+
+If it still fails at cffi, you might need build tools for Python extensions.
+
+Install them with:
+
+py -m pip install wheel setuptools
+py -m pip install --upgrade pip
+
+And make sure Visual Studio Build Tools (C++ workload) are installed:
+
+https://visualstudio.microsoft.com/visual-cpp-build-tools/
+
+
+⸻
+
+Would you like me to show you exactly what your pip.ini should look like with placeholders (so you can just paste and edit)?
